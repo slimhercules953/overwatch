@@ -20,7 +20,7 @@ const clientId = process.env.clientId;
 if (production) {
 	rest
 		.put(Routes.applicationCommands(clientId), { body: commandData })
-		.then(() => console.log("Successfully registered application commands."))
+		.then(() => console.log("Successfully registered application commands. Testing"))
 		.catch(console.error);
 } else if (!production && devGuild) {
 	rest
