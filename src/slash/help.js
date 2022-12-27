@@ -2,7 +2,7 @@ const { SlashCommandBuilder, EmbedBuilder }= require("discord.js");
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName("about")
+		.setName("help")
 		.setDescription("Sends an ephemeral message with info about the bot."),
 	async execute(client, interaction) {
         const replyEmbed = new EmbedBuilder()
