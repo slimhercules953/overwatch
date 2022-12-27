@@ -1,7 +1,8 @@
 require("dotenv").config()
-import { commands } from "./slash";
+const { REST } = require("@discordjs/rest");
+const { commands } = require("./slash");
 
-const { Collection, Client, Formatters, GatewayIntentBits } = require('discord.js');
+const { Collection, Client, Formatters, GatewayIntentBits, Routes } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds]});
 
 const commandList = new Collection();
@@ -13,7 +14,9 @@ for (const command of commands) {
 	commandData.push(command.data.toJSON());
 }
 
-const rest = new REST({ version: "10" }).setToken(token);
+const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
+let production = true;
+const clientId = process.env.clientId;
 if (production) {
 	rest
 		.put(Routes.applicationCommands(clientId), { body: commandData })
