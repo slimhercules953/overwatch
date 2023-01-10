@@ -8,7 +8,6 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds]});
 const commandList = new Collection();
 
 const commandData = [];
-
 for (const command of commands) {
 	commandList.set(command.data.name, command);
 	commandData.push(command.data.toJSON());
@@ -30,7 +29,9 @@ if (production) {
 
 }
 
-client.on("ready", () => console.log("Ready!"));
+client.on("ready", () => console.log("Ready!")
+         //client.user.setAvatar('imageurl');
+);
 
 client.on("interactionCreate", async (interaction) => {
 	if (!interaction.isChatInputCommand()) return;
@@ -53,4 +54,5 @@ client.on("interactionCreate", async (interaction) => {
 		});
 	}
 });
+console.log(commandData)
 client.login(process.env.TOKEN);
