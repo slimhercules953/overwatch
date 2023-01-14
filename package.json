@@ -21,7 +21,8 @@
   "homepage": "https://github.com/slimhercules953/overwatch#readme",
   "dependencies": {
     "discord.js": "^14.7.1",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "os": "^0.1.2"
   },
   "devDependencies": {
     "node": "^16.19.0"
