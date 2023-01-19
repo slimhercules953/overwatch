@@ -169,56 +169,133 @@ module.exports = {
   			)
         interaction.reply({ embeds: [abilityKirikoEmbed]});
       break;
-      case 'ability_mercy':
+      case 'hero_lucio':
+        const lucioEmbed = new EmbedBuilder()
+  			.setColor("#4a4c4e")
+  			.setTitle("We're here to be heard!")
+  			.addFields(
+		{ name: '__Health:__', value: `Health: 200`, inline: true },
+        { name: '__Damage/healing:__', value: `Damage: 40 per Kunai\nHealing: 13 per tailsman or 26 per pair`, inline: true },
+        { name: '__Headshot:__', value: `Kunai headshots do 120 damage`, inline: true },
+        { name: '__Ammo:__', value: `10 shots for Healing Ofunda and 15 for Kunai`, inline: true },
+        { name: '__Healing per second:__', value: `78 HP `, inline: true },
+        { name: '__Aim type:__', value: `Projectile`, inline: true },
+            )
+  			.setThumbnail(
+  				"https://static.wikia.nocookie.net/overwatch_gamepedia/images/8/8c/Lucio-portrait.png/revision/latest/scale-to-width-down/189?cb=20160620004212"
+  			)
+        interaction.reply({ embeds: [lucioEmbed]});
+      break;
+      case 'ability_lucio':
+        const abilityLucioEmbed = new EmbedBuilder()
+  			.setColor("#4a4c4e")
+  			.setTitle("Oh, let's break it down!")
+  			.addFields(
+        { name: '__Amp It Up:__', value: `Healing: 50 per second for allies\nDuration: 3 seconds\nMovement speed: +60%\nArea of Effect: 12 meters radius\nCooldown: 12 seconds`, inline: true },
+        { name: '__Crossfade:__', value: `Healing: 16 per second for allies\nArea of Effect: 12 meters radius\nMovement speed: +25%\nCooldown: 0.38 seconds`, inline: true },
+        { name: '__Sound Barrier:__', value: `Health: 750\nArea of Effect: 30 meter radius\nDuration: 6 seconds \nUltimate cost: 2600 points`, inline: true },
+            )
+  			.setThumbnail(
+  				"https://static.wikia.nocookie.net/overwatch_gamepedia/images/8/8c/Lucio-portrait.png/revision/latest/scale-to-width-down/189?cb=20160620004212"
+  			)
+        interaction.reply({ embeds: [abilityLucioEmbed]});
+      break;
+      case 'hero_mercy':
         const mercyEmbed = new EmbedBuilder()
   			.setColor("#4a4c4e")
-  			.setTitle("The lore of Angela Ziegler")
-  			.setDescription(
-  				"Dr. Angela Ziegler, also known as Mercy, is a Swiss medical doctor and a member of Overwatch, a peacekeeping organization. She is a skilled field medic and has the ability to fly using her Valkyrie suit. She is known for her compassion and desire to help others, and often puts the well-being of her patients above her own safety. Despite her kind nature, she is also a formidable opponent and is not afraid to defend herself or her allies when necessary."
-  			)
+  			.setTitle("Don't worry, I'll be right behind you.")
+  			.addFields(
+		{ name: '__Health:__', value: `Health: 200`, inline: true },
+        { name: '__Damage buff/healing:__', value: `Damage: 30% damage boost\nHealing: 55 HP per seconds`, inline: true },
+        { name: '__Damage:__', value: `20 damage per shot`, inline: true },
+        { name: '__Ammo:__', value: `25 shots`, inline: true },
+        { name: '__Reload time:__', value: `1.4 seconds or after 1.4 seconds of not having it equiped`, inline: true },
+        { name: '__Aim type:__', value: `Projectile`, inline: true },
+            )
   			.setThumbnail(
-  				"https://static.wikia.nocookie.net/overwatch_gamepedia/images/d/d2/Mercy-portrait.png/revision/latest/scale-to-width-down/1000?cb=20160620024553"
+  				"https://static.wikia.nocookie.net/overwatch_gamepedia/images/d/d2/Mercy-portrait.png/revision/latest/scale-to-width-down/350?cb=20160620024553"
   			)
         interaction.reply({ embeds: [mercyEmbed]});
       break;
-      case 'ability_moira':
+      case 'ability_mercy':
+        const abilityMercyEmbed = new EmbedBuilder()
+  			.setColor("#4a4c4e")
+  			.setTitle("Heroes never die!")
+  			.addFields(
+        { name: '__Guardian Angel:__', value: `Movement speed: 17 meters per second\nDuration: as long as it takes to reach the ally\nMax range: 30 meters\nCooldown: 1.5 seconds`, inline: true },
+        { name: '__Resurrect:__', value: `Movement speed: -75%\nHealing: Resurrect a fallen ally\nCasting time: 1.75 seconds\nCooldown: 30 seconds`, inline: true },
+        { name: '__Valkyrie:__', value: `Healing: 60 per second for allies\nDamage: 30% chain-boost damage\nMovement speed: 9 meters per second\nDuration: 15 seconds \nUltimate cost: 1820 points`, inline: true },
+            )
+  			.setThumbnail(
+  				"https://static.wikia.nocookie.net/overwatch_gamepedia/images/d/d2/Mercy-portrait.png/revision/latest/scale-to-width-down/350?cb=20160620024553"
+  			)
+        interaction.reply({ embeds: [abilityMercyEmbed]});
+      break;
+      case 'hero_moira':
         const moiraEmbed = new EmbedBuilder()
   			.setColor("#4a4c4e")
-  			.setTitle("The lore of Moira O'Deorain")
-  			.setDescription(
-  				"Moira O'Deorain is a genetically-engineered life form, former member of the covert operations division of Overwatch called Blackwatch, where her unorthodox methods and controversial experiments eventually led to her expulsion, after this, she joins Talon, an organization dedicated to causing chaos and destabilization around the world, being one of the top scientists, working on biotic technologies. Moira is a complex character with unclear motivations, and her actions pushes the limits of science and morality, which make her a controversial figure among the players, some see her as a villain while others see her as an antihero just trying to do the best she can in a world of chaos and conflict."
-  			)
+  			.setTitle("Humanity is shackled. I will find the key.")
+  			.addFields(
+		{ name: '__Health:__', value: `Health: 200`, inline: true },
+        { name: '__Healing:__', value: `Healing: 70 HP per second`, inline: true },
+        { name: '__Damage:__', value: `50 damage per second`, inline: true },
+        { name: '__Ammo:__', value: `160 biotic energy`, inline: true },
+        { name: '__Reload time:__', value: `42 seconds for all to be regenerated`, inline: true },
+        { name: '__Aim type:__', value: `Beam`, inline: true },
+            )
   			.setThumbnail(
   				"https://static.wikia.nocookie.net/overwatch_gamepedia/images/b/b5/Moira.png/revision/latest/scale-to-width-down/162?cb=20171104021652"
   			)
         interaction.reply({ embeds: [moiraEmbed]});
       break;
-      case 'ability_zenyatta':
+      case 'ability_moira':
+        const abilityMoiraEmbed = new EmbedBuilder()
+  			.setColor("#4a4c4e")
+  			.setTitle("Surrender to my will!")
+  			.addFields(
+        { name: '__Biotic Orb:__', value: `Damage orb: 50 per second up to 200 total\nHealing: 65 per second up to 300\nDuration: 7 seconds or until depleted\nCooldown: 8 seconds`, inline: true },
+        { name: '__Fade:__', value: `Movement speed: +250%\nMax range: 15 meters\nDuration: 0.752\nCooldown: 6 seconds`, inline: true },
+        { name: '__Coalescence:__', value: `Healing: 140 per second for allies\nDamage: 70 per second\nMovement speed: +50%\nDuration: 8 seconds \nUltimate cost: 2800 points`, inline: true },
+            )
+  			.setThumbnail(
+  				"https://static.wikia.nocookie.net/overwatch_gamepedia/images/b/b5/Moira.png/revision/latest/scale-to-width-down/162?cb=20171104021652"
+  			)
+        interaction.reply({ embeds: [abilityMoiraEmbed]});
+      break;
+	  case 'hero_zenyatta':
         const zenyattaEmbed = new EmbedBuilder()
   			.setColor("#4a4c4e")
-  			.setTitle("The lore of Zenyatta")
-  			.setDescription(
-  				`He is an omnic monk and member of the Shambali Monastery, a group of omnics who seek enlightenment through meditation and peaceful contemplation. Zenyatta believes that true peace can only be achieved when all beings understand one another, and seeks to help others find inner peace through the guidance of the Shambali Monastery, his life as monk gave him a philosophy of unity, empathy and understanding. He has an enigmatic and wise personality and is respected by many. Although as a member of a monk order, he also engage into conflicts when he sees it as necessary to protect others.`
-  			)
+  			.setTitle("Amid discord, we will find tranquility.")
+  			.addFields(
+		{ name: '__Health:__', value: `Health: 50\nShield: 150`, inline: true },
+        { name: '__Healing:__', value: `Healing: 30 HP per second`, inline: true },
+        { name: '__Damage:__', value: `48 damage per orb`, inline: true },
+        { name: '__Ammo:__', value: `20`, inline: true },
+        { name: '__Reload time:__', value: `1.5 seconds`, inline: true },
+        { name: '__Aim type:__', value: `Projectile`, inline: true },
+            )
   			.setThumbnail(
   				"https://static.wikia.nocookie.net/overwatch_gamepedia/images/9/92/Zenyatta-portrait.png/revision/latest/scale-to-width-down/269?cb=20160620015935"
   			)
         interaction.reply({ embeds: [zenyattaEmbed]});
       break;
+      case 'ability_zenyatta':
+        const abilityZenyattaEmbed = new EmbedBuilder()
+  			.setColor("#4a4c4e")
+  			.setTitle("Experience tranquility.")
+  			.addFields(
+        { name: '__Orb of Harmony:__', value: `Healing: 30 per second\nMax range: 40 meters\nDuration: 3 seconds if out of sight otherwise infinite\nCooldown: no cooldown`, inline: true },
+        { name: '__Orb of Discord:__', value: `Damage: +25% damage recieved\nMax range: 40 meters\nDuration: 2 seconds if out of sight otherwise infinite\nCooldown: No cooldown`, inline: true },
+        { name: '__Transcendence:__', value: `Healing: 300 per second\nMovement speed: 11 meters per second\nDuration: 6 seconds \nUltimate cost: 2310 points`, inline: true },
+            )
+  			.setThumbnail(
+  				"https://static.wikia.nocookie.net/overwatch_gamepedia/images/9/92/Zenyatta-portrait.png/revision/latest/scale-to-width-down/269?cb=20160620015935"
+  			)
+        interaction.reply({ embeds: [abilityZenyattaEmbed]});
+      break;
       default:
         interaction.reply('That is not a support character.');
 }
-		/*const replyEmbed = new EmbedBuilder()
-			.setColor("#4a4c4e")
-			.setTitle("About")
-			.setDescription(
-				"Lucio Correia dos Santos is a playable character in the popular video game Overwatch. He is a Brazilian DJ and freedom fighter who rose to fame as a musician, using his songs as a platform to spread messages of hope and inspiration. He has the ability to manipulate sound waves, both as a weapon and to provide speed boosts and healing to his allies. He also uses a Soundwave ability, which knocks back enemies, and an ultimate ability called "Sound Barrier" that provides a massive shield to nearby allies. Lucio grew up in the favelas of Rio de Janeiro and witnessed first hand the struggles of the people there, this led him to become a voice for the oppressed and using his music as a way of uplifting them and bringing change. He is an optimistic and charismatic person who wants to make the world a better place and help others. He's a popular hero among the players and is known for his energetic playstyle and flashy abilities."
-			)
-			.setURL("https://overwatch.blizzard.com/en-us/")
-			.setThumbnail(
-				"https://cdn.imgbin.com/13/21/4/imgbin-long-sleeved-t-shirt-crew-neck-t-shirt-iYt4wUW7hw07YKt3xrAQ1Z78M.jpg"
-			)
-			.setTimestamp();*/
-		//interaction.reply({ embeds: [replyEmbed], ephemeral: true });
+		
 	},
 };
